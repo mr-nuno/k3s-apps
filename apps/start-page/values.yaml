@@ -1,0 +1,25 @@
+image:
+  repository: ghcr.io/mr-nuno/start-page
+  tag: latest
+  pullPolicy: Always
+
+replicas: 1
+
+port: 5000
+
+env:
+  TZ: Europe/Stockholm
+
+securityContext:
+  runAsUser: 1000
+
+ingress:
+  host: start.pew.local
+  tls:
+    secretName: pew-wildcard-tls
+
+hostPaths:
+  thermal: /sys/class/thermal
+  hwmon: /sys/class/hwmon
+  hostRoot: /
+  vault: /home/peter/pew
