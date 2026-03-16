@@ -1,6 +1,6 @@
 image:
   repository: ghcr.io/mr-nuno/start-page
-  tag: "1.0.2"
+  tag: "1.1.0"
   pullPolicy: Always
 
 replicas: 1
