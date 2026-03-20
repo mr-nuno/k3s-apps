@@ -9,6 +9,10 @@ port: 80
 env:
   TZ: Europe/Stockholm
 
+rabbitmq:
+  ip: "10.43.137.249"
+  hostname: "rabbitmq.pew.local"
+
 ingress:
   host: rmq-ui.pew.local
   tls:

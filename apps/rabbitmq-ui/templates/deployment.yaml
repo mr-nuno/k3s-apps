@@ -14,6 +14,10 @@ spec:
       labels:
         app: rabbitmq-ui
     spec:
+      hostAliases:
+        - ip: {{ .Values.rabbitmq.ip }}
+          hostnames:
+            - {{ .Values.rabbitmq.hostname }}
       containers:
         - name: rabbitmq-ui
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
