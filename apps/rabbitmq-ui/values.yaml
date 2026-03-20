@@ -1,0 +1,15 @@
+image:
+  repository: ghcr.io/mr-nuno/rabbitmq-ui
+  tag: "latest"
+  pullPolicy: Always
+
+replicas: 1
+port: 80
+
+env:
+  TZ: Europe/Stockholm
+
+ingress:
+  host: rmq-ui.pew.local
+  tls:
+    secretName: pew-wildcard-tls

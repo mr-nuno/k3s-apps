@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}
+  labels:
+    app: rabbitmq-ui
+spec:
+  replicas: {{ .Values.replicas }}
+  selector:
+    matchLabels:
+      app: rabbitmq-ui
+  template:
+    metadata:
+      labels:
+        app: rabbitmq-ui
+    spec:
+      containers:
+        - name: rabbitmq-ui
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - containerPort: {{ .Values.port }}
+          env:
+            - name: TZ
+              value: {{ .Values.env.TZ }}
