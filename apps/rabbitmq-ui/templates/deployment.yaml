@@ -27,3 +27,11 @@ spec:
           env:
             - name: TZ
               value: {{ .Values.env.TZ }}
+            - name: RABBITMQ_URL
+              value: {{ .Values.rabbitmq.url }}
+            - name: RABBITMQ_HOST
+              value: {{ .Values.rabbitmq.hostname }}
+            - name: RABBITMQ_USER
+              value: {{ .Values.rabbitmq.user }}
+            - name: RABBITMQ_PASS
+              value: {{ .Values.rabbitmq.pass }}

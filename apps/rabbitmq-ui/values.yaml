@@ -1,6 +1,6 @@
 image:
   repository: ghcr.io/mr-nuno/rabbitmq-ui
-  tag: "latest"
+  tag: "1.0.2"
   pullPolicy: Always
 
 replicas: 1
@@ -12,6 +12,9 @@ env:
 rabbitmq:
   ip: "192.168.86.249"
   hostname: "rabbitmq.pew.local"
+  url: "https://rabbitmq.pew.local"
+  user: "guest"
+  pass: "guest"
 
 ingress:
   host: rmq-ui.pew.local
