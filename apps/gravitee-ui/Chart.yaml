@@ -1,0 +1,5 @@
+apiVersion: v2
+name: gravitee-ui
+description: Gravitee API Management UI
+version: 0.1.0
+appVersion: "2.0.0"

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Release.Name }}
+  labels:
+    app: gravitee-ui
+spec:
+  selector:
+    app: gravitee-ui
+  ports:
+    - port: 80
+      targetPort: {{ .Values.port }}
