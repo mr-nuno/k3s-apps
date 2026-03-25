@@ -1,0 +1,19 @@
+image:
+  repository: ghcr.io/mr-nuno/gravitee-ui
+  tag: "2.0.0"
+  pullPolicy: Always
+
+replicas: 1
+port: 80
+
+env:
+  TZ: Europe/Stockholm
+
+apim:
+  url: "http://gravitee-apim-api.gravitee.svc.cluster.local:83"
+  host: "gravitee-apim-api.gravitee.svc.cluster.local"
+
+ingress:
+  host: gravitee.pew.local
+  tls:
+    secretName: pew-wildcard-tls
