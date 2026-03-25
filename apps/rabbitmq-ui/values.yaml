@@ -10,9 +10,8 @@ env:
   TZ: Europe/Stockholm
 
 rabbitmq:
-  ip: "127.0.0.1"
-  hostname: "rabbitmq.pew.local"
-  url: "https://rabbitmq.pew.local"
+  hostname: "rabbitmq.default.svc.cluster.local"
+  url: "http://rabbitmq.default.svc.cluster.local:15672"
   user: "guest"
   pass: "guest"
 
